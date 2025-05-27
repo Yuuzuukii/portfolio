@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="fade-in">Yuzuki Masuo</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#products">制作物</a></li>
+                <li><a href="#contact">連絡先</a></li>
+            </ul>
+            <div class="lang-button-wrapper">
+                <button class="lang-switch" onclick="location.href='index_en.html'">English</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="fade-in">
+            <h2>自己紹介</h2>
+            <div class="profile">
+                <img src="./images/IMG_5329.jpg" alt="プロフィール写真" class="profile-image" />
+                <div>
+                    <h3>増尾 柚希</h3>
+                    <p>立命館大学　情報理工学部　社会知能研究室 4回生</p>
+                    <p class="link-wrapper">
+                        <a href="https://github.com/Yuuzuukii" target="_blank" class="link">
+                            <img src="./images/git_logo.png" alt="GitHub" class="icon-link">
+                            github
+                        </a>
+                        <a href="https://www.si-lab.org/index-ja.html" target="_blank" class="link">
+                            <img src="./images/lab.png" alt="Lab" class="icon-link">
+                            silab
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="skills" class="fade-in">
+            <h2>スキルスタック</h2>
+            <ul class="skill-list">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+                <li>MySQL</li>
+            </ul>
+        </section>
+
+        <section id="research" class="fade-in">
+            <h2>研究内容</h2>
+            <div class="research-content">
+                <p>
+                    私の研究では、大規模言語モデルを用いたマルチエージェント対話プロトコルの設計を行っています。文化的価値の対立をテーマに、対話を通じて新たな意味や制度の構築を目指しています。
+                </p>
+                <img src="./images/research.png" alt="研究イメージ" class="research-image">
+            </div>
+        </section>
+
+
+        <section id="products" class="fade-in">
+            <h2>プロダクト</h2>
+            <div class="product-section">
+                <div class="works-container">
+                    <a href="https://si-lab.org/shigachat/" target="_blank" class="work-item">Shigachat</a>
+                    本サービスは、滋賀県に住む在日外国人の方々を対象とした多言語対応のQ&Aサービスである。
+                    ChatGPTと検索拡張生成（RAG）を組み合わせることで、日常生活に関する質問に対して、迅速かつ地域特化の回答を提供する。
+                </div>
+                <!-- 横並びのコンテナ -->
+                <div class="slide-and-description">
+                    <!-- 説明部分（右に並ぶ） -->
+                    <div class="slide-description-box">
+                        <div class="custom-list">
+                            <strong>機能</strong>
+                            <div class="list-item">質問</div>
+                            <div class="list-item">キーワード検索</div>
+                            <div class="list-item">カテゴリ検索</div>
+                            <div class="list-item">質問・閲覧履歴</div>
+                            <div class="list-item">通知</div>
+                            <strong>対応言語</strong>
+                            <div class="list-item">日本語</div>
+                            <div class="list-item">英語</div>
+                            <div class="list-item">ベトナム語</div>
+                            <div class="list-item">中国語</div>
+                            <div class="list-item">韓国語</div>
+                            <strong>Git</strong>
+                            <a href="https://github.com/Yuuzuukii/ShigaChat" target="_blank" class="">GitHub</a>
+                        </div>
+                    </div>
+                    <!-- スライドショー -->
+                    <div class="slideshow">
+                        <button class="prev" onclick="prevSlide()">&#10094;</button>
+                        <div class="slide-container">
+                            <div class="slide active">
+                                <img src="./images/1.png" alt="プロダクト1">
+                                <div class="caption">ログイン</div>
+                            </div>
+                            <div class="slide">
+                                <img src="./images/2.png" alt="プロダクト2">
+                                <div class="caption">質問</div>
+                            </div>
+                            <div class="slide">
+                                <img src="./images/3.png" alt="プロダクト3">
+                                <div class="caption">キーワード検索</div>
+                            </div>
+                            <div class="slide">
+                                <img src="./images/4.png" alt="プロダクト4">
+                                <div class="caption">カテゴリ検索</div>
+                            </div>
+                            <div class="slide">
+                                <img src="./images/5.png" alt="プロダクト5">
+                                <div class="caption">質問履歴</div>
+                            </div>
+                            <div class="slide">
+                                <img src="./images/6.png" alt="プロダクト5">
+                                <div class="caption">閲覧履歴</div>
+                            </div>
+                            <div class="slide">
+                                <img src="./images/7.png" alt="プロダクト5">
+                                <div class="caption">質問管理</div>
+                            </div>
+                        </div>
+                        <button class="next" onclick="nextSlide()">&#10095;</button>
+                        <div class="indicators">
+                            <span class="dot active-dot" onclick="goToSlide(0)"></span>
+                            <span class="dot" onclick="goToSlide(1)"></span>
+                            <span class="dot" onclick="goToSlide(2)"></span>
+                            <span class="dot" onclick="goToSlide(3)"></span>
+                            <span class="dot" onclick="goToSlide(4)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="certifications" class="fade-in">
+            <h2>取得資格</h2>
+            <ul class="cert-list">
+                <li>基本情報技術者試験（FE）</li>
+                <li>TOEIC IP score: 895</li>
+            </ul>
+        </section>
+
+
+
+        <section id="contact" class="fade-in">
+            <h2>連絡先</h2>
+            <p>is0690ke@ed.ritsumei.ac.jp</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
