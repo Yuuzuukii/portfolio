@@ -10,42 +10,61 @@
 
 <body>
     <header>
-        <h1 class="fade-in">Yuzuki Masuo</h1>
+        <h1 class="fade-in">
+            <div class="title">Yuzuki Masuo</div>
+        </h1>
         <nav>
             <ul class="nav-list">
                 <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
+                <li><a href="#skills">Skill Stack</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#products">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="lang-button-wrapper">
-                <button class="lang-switch" onclick="location.href='index.html'">日本語</button>
-            </div>
         </nav>
+        <div class="lang-button-wrapper">
+            <button class="lang-switch" onclick="location.href='index.html'">日本語</button>
+        </div>
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
     </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#research">Research</a>
+        <a href="#products">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </div>
 
     <main>
         <section id="about" class="fade-in">
             <h2>About</h2>
             <div class="profile">
-                <img src="./images/IMG_5329.jpg" alt="Profile Photo" class="profile-image" />
+                <img src="./img/IMG_5329.jpg" alt="Profile Photo" class="profile-image" />
                 <div>
                     <h3>Yuzuki Masuo</h3>
-                    <p>Ritsumeikan University, College of Information Science and Engineering, 4th Year Student, Social
-                        Intelligence Lab</p>
-                    <div class="link-wrapper">
+                    <p>College of Information Science and Engineering, Ritsumeikan University</p>
+                    <p>4th Year, Social Intelligence Laboratory</p>
+                    <p class="link-wrapper">
                         <a href="https://github.com/Yuuzuukii" target="_blank" class="link">
-                            <img src="./images/git_logo.png" alt="GitHub" class="icon-link"> GitHub
+                            <img src="./img/git_logo.png" alt="GitHub" class="icon-link">
+                            GitHub
                         </a>
-                        <a href="https://www.si-lab.org/index-ja.html" target="_blank" class="link">
-                            <img src="./images/lab.png" alt="Lab" class="icon-link"> SILAB
+                        <a href="https://www.si-lab.org/index.html" target="_blank" class="link">
+                            <img src="./img/lab.png" alt="Lab" class="icon-link">
+                            silab
                         </a>
-                    </div>
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="fade-in">
-            <h2>Skills</h2>
+            <h2>Skill Stack</h2>
             <ul class="skill-list">
                 <li>Python</li>
                 <li>JavaScript</li>
@@ -57,74 +76,79 @@
         <section id="research" class="fade-in">
             <h2>Research</h2>
             <div class="research-content">
-                <p>My research focuses on designing multi-agent dialogue protocols using large language models. The goal
-                    is to construct new meanings and systems through dialogue, particularly in the context of cultural
-                    value conflicts.</p>
-                <img src="./images/research_en.png" alt="Research Image" class="research-image">
+                <p>
+                    My research focuses on designing multi-agent dialogue protocols using large language models. 
+                    I explore cultural value conflicts and aim to construct new meanings and institutions through dialogue.
+                </p>
+                <img src="./img/research_en.png" alt="Research Image" class="research-image">
             </div>
         </section>
 
         <section id="products" class="fade-in">
-            <h2>Products</h2>
+            <h2>Projects</h2>
             <div class="product-section">
                 <div class="works-container">
                     <a href="https://si-lab.org/shigachat/" target="_blank" class="work-item">Shigachat</a>
-                    <p>This service is a multilingual Q&A platform for foreign residents living in Shiga Prefecture. It
-                        combines ChatGPT with Retrieval-Augmented Generation (RAG) to provide fast, locally-relevant
-                        responses to everyday questions.</p>
+                    This is a multilingual Q&A service for foreign residents living in Shiga Prefecture. 
+                    By combining ChatGPT with Retrieval-Augmented Generation (RAG), it provides fast and localized answers to daily life questions.
                 </div>
                 <div class="slide-and-description">
                     <div class="slide-description-box">
                         <div class="custom-list">
                             <strong>Features</strong>
-                            <div class="list-item">Ask questions</div>
-                            <div class="list-item">Keyword search</div>
-                            <div class="list-item">Category search</div>
-                            <div class="list-item">Question and view history</div>
+                            <div class="list-item">Ask Questions</div>
+                            <div class="list-item">Keyword Search</div>
+                            <div class="list-item">Category Search</div>
+                            <div class="list-item">History</div>
                             <div class="list-item">Notifications</div>
-                            <strong>Supported Languages</strong>
+                        </div>
+                        <div class="custom-list">
+                            <strong>Languages</strong>
                             <div class="list-item">Japanese</div>
                             <div class="list-item">English</div>
                             <div class="list-item">Vietnamese</div>
                             <div class="list-item">Chinese</div>
                             <div class="list-item">Korean</div>
-                            <strong>GitHub</strong>
-                            <a href="https://github.com/Yuuzuukii/ShigaChat" target="_blank">GitHub</a>
+                        </div>
+                        <div class="custom-list">
+                            <strong>Git</strong>
+                            <a href="https://github.com/Yuuzuukii/ShigaChat" target="_blank" class="">GitHub</a>
                         </div>
                     </div>
+
                     <div class="slideshow">
-                        <button class="prev" onclick="prevSlide()">&#10094;</button>
+                        <button class="prev" onclick="prevSlide()">❮</button>
                         <div class="slide-container">
                             <div class="slide active">
-                                <img src="./images/1.png" alt="Login Screen">
+                                <img src="./img/1.png" alt="Project 1">
                                 <div class="caption">Login</div>
                             </div>
                             <div class="slide">
-                                <img src="./images/2_en.png" alt="Question Submission">
+                                <img src="./img/2_en.png" alt="Project 2">
                                 <div class="caption">Question</div>
                             </div>
                             <div class="slide">
-                                <img src="./images/3_en.png" alt="Answer Detail">
+                                <img src="./img/3_en.png" alt="Project 3">
                                 <div class="caption">Keyword Search</div>
                             </div>
                             <div class="slide">
-                                <img src="./images/4_en.png" alt="User Profile">
+                                <img src="./img/4_en.png" alt="Project 4">
                                 <div class="caption">Category Search</div>
                             </div>
                             <div class="slide">
-                                <img src="./images/5_en.png" alt="Notification Settings">
-                                <div class="caption">Posted History</div>
+                                <img src="./img/5_en.png" alt="Project 5">
+                                <div class="caption">Question History</div>
                             </div>
                             <div class="slide">
-                                <img src="./images/6_en.png" alt="Notification Settings">
-                                <div class="caption">Viewed History</div>
+                                <img src="./img/6_en.png" alt="Project 6">
+                                <div class="caption">View History</div>
                             </div>
                             <div class="slide">
-                                <img src="./images/7_en.png" alt="Notification Settings">
+                                <img src="./img/7_en.png" alt="Project 7">
                                 <div class="caption">Question Management</div>
                             </div>
                         </div>
-                        <button class="next" onclick="nextSlide()">&#10095;</button>
+                        <button class="next" onclick="nextSlide()">❯</button>
                         <div class="indicators">
                             <span class="dot active-dot" onclick="goToSlide(0)"></span>
                             <span class="dot" onclick="goToSlide(1)"></span>
@@ -142,7 +166,7 @@
         <section id="certifications" class="fade-in">
             <h2>Certifications</h2>
             <ul class="cert-list">
-                <li>Fundamental Information Technology Engineer (FE)</li>
+                <li>Fundamental Information Technology Engineer Exam (FE)</li>
                 <li>TOEIC IP score: 895</li>
             </ul>
         </section>
@@ -152,7 +176,57 @@
             <p>is0690ke@ed.ritsumei.ac.jp</p>
         </section>
     </main>
-    <script src="script.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in').forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                }, index * 500);
+            });
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+        });
+
+        let slideIndex = 0;
+        let slides, dots;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                dots[i].classList.remove('active-dot');
+                if (i === index) {
+                    slide.classList.add('active');
+                    dots[i].classList.add('active-dot');
+                }
+            });
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function prevSlide() {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function goToSlide(index) {
+            slideIndex = index;
+            showSlide(slideIndex);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            slides = document.querySelectorAll('.slide');
+            dots = document.querySelectorAll('.dot');
+            showSlide(slideIndex);
+        });
+    </script>
 </body>
 
 </html>
