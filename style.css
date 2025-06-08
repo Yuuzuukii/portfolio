@@ -139,12 +139,10 @@ section {
 }
 
 .link-wrapper {
-  display: flex;
-  justify-content: center; /* 中央寄せ */
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .link {
@@ -312,6 +310,16 @@ section {
 @media (max-width: 768px) {
     header {
         padding: 24px;
+    }
+
+    .link-wrapper {
+        display: flex;
+        justify-content: center;
+        /* 中央寄せ */
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
     }
 
     .hamburger {
