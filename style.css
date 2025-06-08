@@ -17,9 +17,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 800px;   /* ← 最大幅を制限 */
-  margin: 0 auto;     /* ← 中央寄せ */
-  padding: 0 20px;    /* ← 少し余白を持たせる（任意） */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .nav-list {
@@ -28,25 +28,6 @@ nav {
     gap: 20px;
     padding: 0;
     margin: 0;
-}
-
-.lang-button-wrapper {
-    margin-left: auto;
-}
-
-.lang-switch {
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 6px 12px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.lang-switch:hover {
-    background-color: #fff;
-    color: #000;
 }
 
 nav ul {
@@ -62,10 +43,41 @@ nav a {
     text-decoration: none;
 }
 
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: #101010;
+    text-align: center;
+}
+
+.mobile-nav.open {
+    display: flex;
+}
+
+.mobile-nav a {
+    padding: 10px;
+    border-bottom: 1px solid #666;
+    color: white;
+    text-decoration: none;
+}
+
+
 section {
-    padding: 50px;
     max-width: 800px;
-    margin: auto;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .fade-in {
@@ -141,7 +153,8 @@ section {
 }
 
 .research-image {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -154,15 +167,18 @@ section {
     font-size: 14px;
 }
 
+/* インジケーターの位置調整 */
 .indicators {
-    text-align: center;
-    margin-top: -80px;
-    padding: 8px 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    position: relative;
-    bottom: 0;
-
+    position: absolute;
+    bottom: 10px;
+    /* 下部に固定 */
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    /* 見やすいよう半透明背景 */
+    padding: 6px 10px;
+    border-radius: 8px;
 }
 
 .dot {
@@ -182,7 +198,7 @@ section {
 .prev,
 .next {
     position: absolute;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -211,38 +227,36 @@ section {
     transition: opacity 0.5s ease;
 }
 
-/* 横並び用ラッパー */
 .slide-and-description {
     display: flex;
     gap: 30px;
     align-items: flex-start;
     width: 100%;
+    height: 100%;
     flex-wrap: nowrap;
     margin-top: 20px;
 }
 
-/* スライドショー部分を制限 */
 .slideshow {
     position: relative;
-    width: 60%;
-    /* 画面の60%までに制限 */
-    height: 400px;
+    width: 100%;
     min-width: 300px;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* 説明文のボックス */
 .slide-description-box {
-    width: 35%;
-    font-size: 16px;
-    padding: 10px;
-    line-height: 1.6;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .slide-container {
     width: 100%;
-    height: 100%;
     position: relative;
+    aspect-ratio: 16 / 9;
+    /* 横:縦 = 16:9 を保証（縦幅自動でついてくる） */
 }
 
 .slide.active {
@@ -251,21 +265,138 @@ section {
 
 .slide img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-height: 350px;
-    /* 高さも制限することで縦長を防ぐ */
+    height: 100%;
+    object-fit: cover;
+    /* 枠にぴったりフィットさせる */
     border-radius: 8px;
+    max-height: none;
+    /* 高さ制限を解除 */
 }
 
 .custom-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding-left: 10px;
+    gap: 6px;
 }
 
 .list-item::before {
     content: "- ";
     margin-right: 4px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 24px;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 26px;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 16px;
+    }
+
+    .research-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .research-image {
+        max-width: 90%;
+    }
+
+    .slide-and-description {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .slide-description-box {
+        width: 100%;
+    }
+
+    .custom-list {
+        font-size: 14px;
+    }
+
+    .slide-container {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        /* 横:縦 = 16:9 を保証（縦幅自動でついてくる） */
+        position: relative;
+    }
+
+    .slideshow {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mobile-nav a {
+        font-size: 14px;
+    }
+
+    .works-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .custom-list {
+        font-size: 13px;
+    }
+
+    .link {
+        font-size: 12px;
+    }
+
+    .mobile-nav a {
+        font-size: 13px;
+    }
+
+    .caption {
+        font-size: 12px;
+    }
 }
