@@ -116,7 +116,7 @@ export default function About() {
                       textTransform="uppercase"
                       letterSpacing="1px"
                     >
-                      Information Science Student/ Engineer
+                      Information Science Student
                     </Text>
                   </Box>
 
