@@ -33,10 +33,24 @@ import { useLanguage } from "../context/LanguageContext";
 export default function Products() {
   const { t, language } = useLanguage();
 
-  const slides = t('products.project.slides').map((slide, index) => ({
-    src: language === 'en' ? `/img/${index + 1}_en.png` : `/img/${index + 1}.png`,
-    caption: slide.caption
-  }));
+  const slides = t('products.project.slides').map((slide, index) => {
+    // サインアップ(1)、ログイン(2)以外は言語別画像を使用
+    const imageIndex = index + 1;
+    let src;
+    
+    if (imageIndex === 1 || imageIndex === 2) {
+      // サインアップとログインは言語別画像なし
+      src = `/img_new/${imageIndex}.png`;
+    } else {
+      // その他は言語別画像を使用
+      src = language === 'en' ? `/img_new/${imageIndex}_en.png` : `/img_new/${imageIndex}.png`;
+    }
+    
+    return {
+      src: src,
+      caption: slide.caption
+    };
+  });
 
   const technologies = [
     "React",
@@ -261,14 +275,14 @@ export default function Products() {
                 {...fadeInUp}
                 transition={{ delay: 0.4, duration: 0.8 }}
                 flex="1"
-                maxW={{ base: "100%", xl: "600px" }}
+                maxW={{ base: "100%", xl: "750px" }}
               >
                 <Box
                   bg="rgba(255, 255, 255, 0.05)"
                   backdropFilter="blur(10px)"
                   border="1px solid rgba(252, 163, 17, 0.2)"
                   borderRadius="2xl"
-                  p={6}
+                  p={8}
                   _hover={{
                     borderColor: "rgba(252, 163, 17, 0.4)",
                     boxShadow: "0 12px 40px rgba(252, 163, 17, 0.15)",
@@ -284,13 +298,15 @@ export default function Products() {
                     transition={{ duration: 0.5 }}
                     key={idx}
                     boxShadow="0 8px 32px rgba(0, 0, 0, 0.3)"
+                    aspectRatio="7/4"
+                    maxW={{ base: "100%", md: "700px" }}
                   >
                     <Image
                       src={slides[idx].src}
                       alt={slides[idx].caption}
-                      objectFit="cover"
+                      objectFit="contain"
                       width="100%"
-                      height={{ base: "300px", md: "400px" }}
+                      height="100%"
                     />
                     <Box
                       position="absolute"

@@ -89,7 +89,6 @@ export default function Certifications() {
                       right={0}
                       width="100px"
                       height="100px"
-                      bg={`linear-gradient(45deg, ${cert.color}20, transparent)`}
                       borderRadius="0 2xl 0 100%"
                       zIndex={0}
                     />
@@ -146,14 +145,6 @@ export default function Certifications() {
               textAlign="center"
               maxW="600px"
             >
-              <Text 
-                fontSize="lg" 
-                color="brand.platinum" 
-                lineHeight="1.7"
-                opacity={0.9}
-              >
-                {t('certifications.description')}
-              </Text>
             </MotionBox>
           </VStack>
         </MotionBox>

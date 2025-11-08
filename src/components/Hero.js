@@ -106,7 +106,7 @@ export default function Hero() {
                   px={8}
                   py={6}
                   fontSize="md"
-                  onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
                   _hover={{
                     transform: 'translateY(-3px)',
                     boxShadow: '0 10px 30px rgba(252, 163, 17, 0.4)',

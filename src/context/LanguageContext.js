@@ -106,13 +106,14 @@ export const translations = {
         techStackTitle: '技術スタック',
         githubButton: 'GitHub で見る',
         slides: [
+          { caption: 'サインアップ画面' },
           { caption: 'ログイン画面' },
-          { caption: '質問インターフェース' },
+          { caption: 'チャット画面' },
           { caption: 'キーワード検索機能' },
           { caption: 'カテゴリ検索機能' },
-          { caption: '質問履歴管理' },
-          { caption: '閲覧履歴表示' },
-          { caption: '質問管理画面' }
+          { caption: '質問管理画面' },
+          { caption: '質問登録画面' },
+          { caption: '質問編集画面' }
         ]
       }
     },
@@ -178,7 +179,7 @@ export const translations = {
         description: '所属研究室の詳細情報',
         open: '開く',
       },
-      copyright: '© 2024 Yuzuki Masuo. All rights reserved.',
+      copyright: '© 2025 Yuzuki Masuo. All rights reserved.',
       tech: 'Made using React & Chakra UI',
     },
   },
@@ -289,13 +290,14 @@ export const translations = {
         techStackTitle: 'Tech Stack',
         githubButton: 'View on GitHub',
         slides: [
+          { caption: 'Sign Up Screen' },
           { caption: 'Login Screen' },
-          { caption: 'Question Interface' },
+          { caption: 'Chat Screen' },
           { caption: 'Keyword Search Function' },
           { caption: 'Category Search Function' },
-          { caption: 'Question History Management' },
-          { caption: 'Browsing History Display' },
-          { caption: 'Question Management Screen' }
+          { caption: 'Question Management Screen' },
+          { caption: 'Question Registration Screen' },
+          { caption: 'Question Editing Screen' }
         ]
       }
     },
@@ -361,7 +363,7 @@ export const translations = {
         description: 'Detailed information about my research lab',
         open: 'Open',
       },
-      copyright: '© 2024 Yuzuki Masuo. All rights reserved.',
+      copyright: '© 2025 Yuzuki Masuo. All rights reserved.',
       tech: 'Made using React & Chakra UI',
     },
   },

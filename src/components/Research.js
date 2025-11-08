@@ -211,7 +211,7 @@ export default function Research() {
                 {...fadeInRight}
                 transition={{ delay: 0.4, duration: 0.8 }}
                 flex="1"
-                maxW={{ base: "100%", lg: "500px" }}
+                maxW={{ base: "100%", lg: "650px" }}
               >
                 <Box
                   position="relative"
@@ -227,8 +227,8 @@ export default function Research() {
                   <Image
                     src={language === 'en' ? "/img/research_en.png" : "/img/research.png"}
                     alt={t('research.image')}
-                    w="100%"
-                    h={{ base: "300px", md: "400px" }}
+                    aspectRatio="3:2"
+                    maxW={{ base: "100%", md: "600px" }}
                     objectFit="cover"
                   />
                   <Box

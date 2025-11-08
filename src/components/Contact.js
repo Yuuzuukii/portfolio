@@ -226,14 +226,6 @@ export default function Contact() {
               >
                 {t('contact.copyright')}
               </Text>
-              <Text 
-                color="brand.orange" 
-                fontSize="sm"
-                mt={2}
-                fontWeight="600"
-              >
-                {t('contact.tech')}
-              </Text>
             </MotionBox>
           </VStack>
         </MotionBox>
