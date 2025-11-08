@@ -73,7 +73,7 @@ export default function About() {
                   }}
                 >
                   <Image 
-                    src="/img/IMG_5329.jpg" 
+                    src="./img/IMG_5329.jpg" 
                     alt="プロフィール写真" 
                     boxSize={{ base: "200px", md: "250px" }}
                     borderRadius="50%" 
@@ -156,7 +156,7 @@ export default function About() {
                         boxShadow: '0 8px 25px rgba(252, 163, 17, 0.2)',
                       }}
                     >
-                      <Image src="/img/git_logo.png" alt="GitHub" boxSize="20px" />
+                      <Image src="./img/git_logo.png" alt="GitHub" boxSize="20px" />
                       GitHub
                       <ExternalLinkIcon boxSize={3} />
                     </Link>
@@ -183,7 +183,7 @@ export default function About() {
                         boxShadow: '0 8px 25px rgba(252, 163, 17, 0.2)',
                       }}
                     >
-                      <Image src="/img/lab.png" alt="Lab" boxSize="20px" />
+                      <Image src="./img/lab.png" alt="Lab" boxSize="20px" />
                       SI Lab
                       <ExternalLinkIcon boxSize={3} />
                     </Link>

@@ -40,10 +40,10 @@ export default function Products() {
     
     if (imageIndex === 1 || imageIndex === 2) {
       // サインアップとログインは言語別画像なし
-      src = `/img_new/${imageIndex}.png`;
+      src = `./img_new/${imageIndex}.png`;
     } else {
       // その他は言語別画像を使用
-      src = language === 'en' ? `/img_new/${imageIndex}_en.png` : `/img_new/${imageIndex}.png`;
+      src = language === 'en' ? `./img_new/${imageIndex}_en.png` : `./img_new/${imageIndex}.png`;
     }
     
     return {

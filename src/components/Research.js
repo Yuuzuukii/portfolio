@@ -225,7 +225,7 @@ export default function Research() {
                   transition="all 0.3s ease"
                 >
                   <Image
-                    src={language === 'en' ? "/img/research_en.png" : "/img/research.png"}
+                    src={language === 'en' ? "./img/research_en.png" : "./img/research.png"}
                     alt={t('research.image')}
                     aspectRatio="3:2"
                     maxW={{ base: "100%", md: "600px" }}
