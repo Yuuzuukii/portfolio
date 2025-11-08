@@ -1,15 +1,15 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Yuzuki's Portfolio",
+  "name": "Yuzuki's Portfolio",
   "icons": [
     {
-      "src": "mypic192.jpg",
-      "type": "image/jpeg",
+      "src": "homealone.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "mypic512.jpg",
-      "type": "image/jpeg",
+      "src": "homealone.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
